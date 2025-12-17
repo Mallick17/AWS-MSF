@@ -1,0 +1,8 @@
+# PyFlink for DataStream API
+apache-flink==1.19.0
+
+# Py4J is included with PyFlink automatically
+# It provides the Java bridge we use to access Iceberg classes
+
+# No additional Python packages needed!
+# All Iceberg functionality is accessed through Java classes via Py4J

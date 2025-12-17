@@ -1,0 +1,25 @@
+[
+  {
+    "PropertyGroupId": "kinesis.analytics.flink.run.options",
+    "PropertyMap": {
+      "python": "streaming_job.py",
+      "jarfile": "lib/pyflink-dependencies.jar"
+    }
+  },
+  {
+    "PropertyGroupId": "KafkaConfig",
+    "PropertyMap": {
+      "bootstrap.servers": "b-1.workingmultitableclus.nhe1pt.c2.kafka.ap-south-1.amazonaws.com:9098,b-2.workingmultitableclus.nhe1pt.c2.kafka.ap-south-1.amazonaws.com:9098,b-3.workingmultitableclus.nhe1pt.c2.kafka.ap-south-1.amazonaws.com:9098",
+      "topic": "user_events",
+      "group.id": "flink-s3-tables-datastream"
+    }
+  },
+  {
+    "PropertyGroupId": "S3TablesConfig",
+    "PropertyMap": {
+      "warehouse": "arn:aws:s3tables:ap-south-1:149815625933:bucket/testing-poc-flink-table-bucket",
+      "namespace": "pocflink",
+      "table": "ride_events"
+    }
+  }
+]
